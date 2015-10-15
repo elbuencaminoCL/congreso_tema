@@ -307,26 +307,18 @@ Template Name: Home
                 <div id="auspiciadores">
                     <div class="container clearfix">
                         <h3>Auspiciadores</h3>
-                        <div class="cont-org col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 item-logo">
-                                <img src="<?php bloginfo('template_directory'); ?>/imag/logo/sociedad.png" alt="Sociedad de Prótesis y Rehabilitación Oral de Chile" class="img-responsive" />
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 item-logo">
-                                <img src="<?php bloginfo('template_directory'); ?>/imag/logo/ismr.png" alt="ISMR" class="img-responsive" />
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 item-logo">
-                                <img src="<?php bloginfo('template_directory'); ?>/imag/logo/orema.png" alt="Clínica OREMA" class="img-responsive" />
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 item-logo">
-                                <img src="<?php bloginfo('template_directory'); ?>/imag/logo/uandes.jpg" alt="Universidad de Los Andes" class="img-responsive" />
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 item-logo">
-                                <img src="<?php bloginfo('template_directory'); ?>/imag/logo/sociedad.png" alt="Sociedad de Prótesis y Rehabilitación Oral de Chile" class="img-responsive" />
-                            </div>
-                            <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 item-logo">
-                                <img src="<?php bloginfo('template_directory'); ?>/imag/logo/sociedad.png" alt="Sociedad de Prótesis y Rehabilitación Oral de Chile" class="img-responsive" />
-                            </div>
-                        </div>
+                        <?php global $query_string;
+                        query_posts( $query_string . '&post_type=auspiciadores' );?>
+                            <?php if (have_posts()) : ?>
+                                <div class="cont-org col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                                    <?php while (have_posts()) : the_post(); ?>
+                                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-12 item-logo">
+                                            <?php echo get_the_post_thumbnail($page->ID, 'logos-image', array('class' => 'img-responsive'));?>
+                                        </div>
+                                    <?php endwhile;?>
+                                </div>
+                            <?php endif; ?>
+                        <?php wp_reset_query();?>
                     </div>
                 </div>
             </div>

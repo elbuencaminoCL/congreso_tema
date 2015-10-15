@@ -18,7 +18,7 @@ function wpse_setup_theme() {
     }
     if ( function_exists( 'add_image_size' ) ) { 
         add_image_size( 'main-image', 370, 180, true);
-        add_image_size( 'imperdibles-image', 438, 315, true);
+        add_image_size( 'logos-image', 155, 60, true);
     }
 } 
 add_action( 'after_setup_theme', 'wpse_setup_theme' );
@@ -106,8 +106,8 @@ global $wpdb;
     $r = wp_parse_args( $args, $defaults );
     extract( $r, EXTR_SKIP );
 
-    if($exclude != 'false') $base_pages = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE (post_type = 'page' AND post_parent = ".$id.") AND (post_status = 'publish' AND menu_order >= 0) ORDER BY menu_order ASC LIMIT 1");
-    else $base_pages = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE (post_type = 'page' AND post_parent = ".$id.") AND post_status = 'publish' ORDER BY menu_order ASC LIMIT 1");
+    if($exclude != 'false') $base_pages = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE (post_type = 'page' AND post_name = 'bases' AND post_parent = ".$id.") AND (post_status = 'publish' AND menu_order >= 0) ORDER BY menu_order ASC LIMIT 1");
+    else $base_pages = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE (post_type = 'page' AND post_name = 'bases' AND post_parent = ".$id.") AND post_status = 'publish' ORDER BY menu_order ASC LIMIT 1");
     if(!empty($base_pages)){
         $i = 0; $base_pages_size = count($base_pages) - 1;
         foreach($base_pages as $bpages){
@@ -150,6 +150,34 @@ function create_post_type_expositores() {
             'public' => true,
             'has_archive' => true,
             'rewrite' => array('slug' => 'listado-expositores', 'hierarchical' => true),
+            'hierarchical' => true,
+            'show_ui' => true,
+            'query_var' => true,
+            'update_count_callback' => '_update_post_term_count',
+            'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'custom-fields' )
+        )
+    );
+    flush_rewrite_rules();
+}
+
+add_action( 'init', 'create_post_type_auspiciadores' );
+function create_post_type_auspiciadores() {
+    register_post_type( 'auspiciadores',
+        array(
+            'labels' => array(
+                'name' => __('Auspiciadores'),
+                'singular_name' => __('Auspiciador'),
+                'add_new' => __('Agregar auspiciador'),
+                'add_new_item' => __('Agregar nuevo auspiciador'),
+                'edit_item' => __('Editar auspiciador'),
+                'new_item' => __('Nuevo auspiciador'),
+                'all_items' => __('Todos los auspiciadores'),
+                'view_item' => __('Ver auspiciadores'),
+                'search_items' => __('Buscar auspiciadores')
+            ),
+            'public' => true,
+            'has_archive' => true,
+            'rewrite' => array('slug' => 'listado-auspiciadores', 'hierarchical' => true),
             'hierarchical' => true,
             'show_ui' => true,
             'query_var' => true,
