@@ -14,7 +14,7 @@ Template Name: Home
                             <h3>Santiago de Chile, 17, 18 y 19 de marzo</h3>
                             <h3>Auditorio [nombre auditorio], Universidad de Los Andes</h3>
                             <div class="cont-button clearfix">
-                                <a href="formulario.html" class="descargar ajax" id="inscripciones">Inscripciones al Congreso</a>
+                                <a href="#" id="pop-inscripcion" class="descargar">Inscripciones al Congreso</a>
                             </div>
                         </div>
                     </div>

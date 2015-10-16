@@ -35,8 +35,6 @@
 <?php if ( is_page('inicio') || is_front_page() ) { ?>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$('li.contacto a').addClass("ajax");
-			$(".ajax").colorbox();
 			$('#inicio').parallax("50%", 0.1);
 			$('#intro').parallax("50%", 0.3);
 			$('#ubicacion').parallax("50%", 0.1);
@@ -56,6 +54,8 @@
 			        window.location.hash = target;
 			    });
 			});
+			$('li.contacto a').addClass("ajax");
+			$(".ajax").colorbox();
 		})
 	</script>
 	<script>
@@ -92,6 +92,10 @@
 	            $('#pop-rosemary').bind('click', function(e) {
 					e.preventDefault();
 					$('#cv-rosemary').bPopup();
+	            });
+	            $('#pop-inscripcion').bind('click', function(e) {
+					e.preventDefault();
+					$('#form-inscripcion').bPopup();
 	            });
 	        });
 	    })(jQuery);

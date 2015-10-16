@@ -7,15 +7,15 @@ h3 {
   margin: 0 0 50px;
   font-size: 25px;
   font-weight: 600;
-  color: #0066ff;
+  color: #0076bf;
   text-transform: uppercase;
   line-height: 140%;
 }
 h4 {
-  color: #0066ff;
+  color: #0076bf;
 }
 a {
-  color: #0066ff;
+  color: #0076bf;
   cursor: pointer;
 }
 a:hover {
@@ -77,7 +77,7 @@ header {
   cursor: pointer;
 }
 #inicio #main-nav a:hover {
-  color: #0066ff;
+  color: #0076bf;
   background: none;
 }
 #inicio #main-nav .nav > li > a:hover,
@@ -117,8 +117,8 @@ header {
   border: 2px solid #ffffff;
 }
 #inicio .cont-site a.descargar:hover {
-  background: #0066ff;
-  border: 2px solid #0066ff;
+  background: #0076bf;
+  border: 2px solid #0076bf;
 }
 #intro {
   padding: 100px 0;
@@ -150,7 +150,7 @@ header {
   font-weight: 700;
 }
 #expositores h4 a {
-  color: #0066ff;
+  color: #0076bf;
 }
 #expositores h4 a:hover {
   color: #c96565;
@@ -186,7 +186,7 @@ header {
 }
 #organizadores,
 #auspiciadores {
-  padding: 80px 0 70px;
+  padding: 80px 0 55px;
   text-align: center;
   border-bottom: 1px solid #bebdbd;
 }
@@ -264,7 +264,7 @@ header {
   color: #333333;
 }
 #bases .cont-descarga a:hover {
-  color: #0066ff;
+  color: #0076bf;
 }
 #social {
   padding: 90px 0;
@@ -329,7 +329,7 @@ header {
   margin: 0 0 30px;
   font-size: 18px;
   font-weight: 600;
-  color: #0066ff;
+  color: #0076bf;
 }
 #social .cont-description p {
   margin: 0 0 30px;
@@ -418,9 +418,9 @@ header {
 }
 #ubicacion .cont-button a.descargar:hover,
 #ubicacion .cont-button input.descargar:hover {
-  background: #0066ff;
+  background: #0076bf;
   color: #ffffff !important;
-  border: 2px solid #0066ff;
+  border: 2px solid #0076bf;
 }
 #ubicacion .cont-ubica {
   position: relative;
@@ -458,7 +458,7 @@ header {
 .cont-button input.descargar {
   display: inline-block;
   padding: 8px 30px;
-  color: #0066ff;
+  color: #0076bf;
   font-size: 13px;
   font-weight: 700;
   -webkit-border-radius: 5px;
@@ -466,14 +466,14 @@ header {
   -ms-border-radius: 5px;
   -o-border-radius: 5px;
   border-radius: 5px;
-  border: 2px solid #0066ff;
+  border: 2px solid #0076bf;
   text-transform: uppercase;
 }
 .cont-button a.descargar:hover,
 .cont-button input.descargar:hover {
-  background: #0066ff;
+  background: #0076bf;
   color: #ffffff !important;
-  border: 2px solid #0066ff;
+  border: 2px solid #0076bf;
 }
 /*FORMS*/
 .bform {
@@ -484,26 +484,14 @@ header {
   width: 600px;
   padding: 0;
 }
-.cont-formulario h3.title {
-  margin: 10px 0 30px;
-  text-align: center;
-}
-.cont-formulario h4 {
-  font-size: 18px !important;
-}
-.cont-formulario .excerpt {
-  margin: 0 0 20px;
-  font-size: 14px;
-  text-align: center;
-  color: #0066ff;
-}
 .cont-formulario .separa {
   margin: 0 0 30px;
 }
 .cont-formulario .separa div:first-child {
   padding-left: 0;
 }
-.cont-formulario .separa div:last-child {
+.cont-formulario .separa div:last-child,
+.cont-formulario .separa .last-div {
   padding-right: 0;
 }
 .cont-formulario label {
@@ -538,7 +526,7 @@ header {
 }
 .cont-formulario input[type="submit"].descargar {
   margin-bottom: 0;
-  background: #0066ff;
+  background: #0076bf;
   color: #ffffff;
 }
 .cont-formulario input[type="submit"].descargar:hover {
@@ -554,7 +542,7 @@ header {
 }
 .cont-formulario .cont-button a {
   margin: 0 auto;
-  background: #0066ff;
+  background: #0076bf;
   color: #ffffff;
 }
 .cont-formulario .cont-button a:hover {
@@ -585,6 +573,40 @@ header {
   padding: 12px 0;
   font-size: 13px;
 }
+.bForm {
+  background: #eae8e8;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 25px 5px #999;
+  min-width: 450px;
+  max-width: 700px;
+  padding: 25px 25px 15px;
+}
+.bForm .cont-formulario {
+  width: 100%;
+}
+.bForm h3.title {
+  margin: 10px 0 30px;
+  text-align: center;
+}
+.bForm h4 {
+  font-size: 18px !important;
+}
+.bForm .excerpt {
+  margin: 0 0 20px;
+  font-size: 14px;
+  text-align: center;
+  color: #0076bf;
+}
+.bForm .separa div:first-child {
+  padding-left: 0;
+}
+.bForm .separa div:last-child {
+  padding-right: 0;
+}
 /*AUXI STYLES*/
 .hidden-div {
   display: none;
@@ -595,19 +617,19 @@ header {
   text-transform: uppercase;
   font-weight: 600;
   background: none;
-  color: #0066ff;
+  color: #0076bf;
   cursor: pointer;
   text-align: center;
   font-size: 12px;
   text-decoration: none;
-  border: 2px solid #0066ff !important;
+  border: 2px solid #0076bf !important;
   position: absolute;
   right: 0px;
   top: 0px;
 }
 #cboxClose:hover,
 .b-close:hover {
-  background: #0066ff;
+  background: #0076bf;
   color: #ffffff;
 }
 .b-close {
@@ -616,12 +638,12 @@ header {
   text-transform: uppercase;
   font-weight: 600;
   background: none;
-  color: #0066ff;
+  color: #0076bf;
   cursor: pointer;
   text-align: center;
   font-size: 12px;
   text-decoration: none;
-  border: 2px solid #0066ff !important;
+  border: 2px solid #0076bf !important;
   position: absolute;
   right: 30px;
   top: 30px;
