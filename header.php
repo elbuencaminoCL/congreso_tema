@@ -111,9 +111,11 @@
 	<?php if ( is_page('inicio') || is_front_page() ) { ?>
 		<div id="wrapper">
 			<header id="header" class="clearfix">
-			    <nav id="lg-nav">
-
-			    </nav>
+				<div class="container">
+				    <nav id="lg-nav">
+				    	<?php dynamic_sidebar( 'sidebar-general' ); ?>
+				    </nav>
+				</div>
 			</header>
 	<?php } else { ?>
 		<header style="display:none;"></header>

@@ -29,6 +29,17 @@ a:hover {
 header {
   position: relative;
 }
+header .container {
+  position: relative;
+}
+header #lg-nav {
+  position: absolute;
+  right: 0;
+  z-index: 1000;
+}
+header #lg-nav h2 {
+  display: none;
+}
 /*CONTENT*/
 #inicio {
   position: relative;
@@ -214,10 +225,10 @@ header {
   float: none;
 }
 #programa {
-  padding: 90px 0;
+  padding: 70px 0 80px;
   text-align: center;
   border-bottom: 1px solid #bebdbd;
-  background: #eae8e8;
+  background: url(../imag/back/bg-santiago1.jpg) no-repeat left top #eae8e8;
 }
 #programa h4 {
   margin: 0 5px 25px;
@@ -229,7 +240,7 @@ header {
   padding: 0;
 }
 #programa ul li {
-  margin: 0 5px 20px;
+  margin: 0 5px 15px;
   font-size: 13px;
   list-style-type: none;
   line-height: 120%;
@@ -253,7 +264,7 @@ header {
   border-bottom: 1px solid #bebdbd;
 }
 #bases .cont-descarga {
-  margin: 0 auto;
+  margin: 0 auto 40px;
   float: none;
 }
 #bases .cont-descarga p {
@@ -596,7 +607,7 @@ header {
   font-size: 18px !important;
 }
 .bForm .excerpt {
-  margin: 0 0 20px;
+  margin: 0 25px 20px;
   font-size: 14px;
   text-align: center;
   color: #0076bf;
@@ -604,7 +615,8 @@ header {
 .bForm .separa div:first-child {
   padding-left: 0;
 }
-.bForm .separa div:last-child {
+.bForm .separa div:last-child,
+.bForm .separa .last-div {
   padding-right: 0;
 }
 /*AUXI STYLES*/

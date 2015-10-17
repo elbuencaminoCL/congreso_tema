@@ -131,6 +131,42 @@ global $wpdb;
     }
 }
 
+function programa_pages($args){
+global $wpdb;
+    // Defaults
+    $defaults = array( 'id' => $ppage->ID, 'class' => 'ppage', 'excerpt' => true, 'content' => false, 'childs' => false, 'exclude' => true );
+    $r = wp_parse_args( $args, $defaults );
+    extract( $r, EXTR_SKIP );
+
+    if($exclude != 'false') $programa_pages = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE (post_type = 'page' AND post_name = 'programa' AND post_parent = ".$id.") AND (post_status = 'publish' AND menu_order >= 0) ORDER BY menu_order ASC LIMIT 1");
+    else $programa_pages = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE (post_type = 'page' AND post_name = 'programa' AND post_parent = ".$id.") AND post_status = 'publish' ORDER BY menu_order ASC LIMIT 1");
+    if(!empty($programa_pages)){
+        $i = 0; $programa_pages_size = count($programa_pages) - 1;
+        foreach($programa_pages as $ppages){
+            if ( $i === 0 ) $pos = ''; elseif ( $i === $programa_pages_size ) $pos = 'bloque'; else $pos = 'bloque';
+            if($ppages->menu_order >= 0){
+                $dia1 = get_post_meta( $ppages->ID, '_programa_dia_1', true);
+                $dia2 = get_post_meta( $ppages->ID, '_programa_dia_2', true);
+                echo '<div id="programa">';
+                    echo '<div class="container clearfix">';
+                        echo '<div class="cont-programa col-lg-12 col-md-12 col-sm-12 col-xs-12">';
+                            echo '<h3>'.$ppages->post_title.'</h3>';
+                            echo '<div class="clearfix">'.$ppages->post_content.'</div>';
+                            echo '<div class="clearfix cont-pre">';
+                                echo '<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">'.$dia1.'</div>';
+                                echo '<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">'.$dia2.'</div>';
+                                echo '<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">';
+                                    echo '<img src="'.bloginfo('template_directory').'/imag/back/bg-logo.png" alt="logo congreso" class="img-responsive" />';
+                                echo '</div>';
+                            echo '</div>';
+                        echo '</div>';
+                    echo '</div>';
+                echo '</div>';
+            $i++; }
+        }
+    }
+}
+
 //=================================================================== POST TYPE AND TAXONOMY // 
 add_action( 'init', 'create_post_type_expositores' );
 function create_post_type_expositores() {

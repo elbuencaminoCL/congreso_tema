@@ -29,7 +29,9 @@ a:hover {text-decoration:none; background:none;}
 /*HEADER*/
 header {position:relative;}
 header {
-	
+.container {position:relative;}
+	#lg-nav {position:absolute; right:0; z-index:1000;}
+	#lg-nav h2 {display:none;}
 }
 
 /*CONTENT*/
@@ -84,11 +86,11 @@ header {
 	.cont-org {text-align:center;}
 	.item-logo {margin:0 0 60px; display:inline-block; float:none;}
 }
-#programa {padding:90px 0; text-align:center; border-bottom:1px solid @border-grey; background:/*url(../imag/back/bg-logo.png) no-repeat 870px 450px*/ @back-grey;}
+#programa {padding:70px 0 80px; text-align:center; border-bottom:1px solid @border-grey; background: url(../imag/back/bg-santiago1.jpg) no-repeat left top @back-grey;}
 #programa {
 	h4 {margin:0 5px 25px; text-align:left; text-transform:uppercase;}
 	ul {margin:0; padding:0;}
-	ul li {margin:0 5px 20px; font-size:13px; list-style-type:none; line-height:120%;}
+	ul li {margin:0 5px 15px; font-size:13px; list-style-type:none; line-height:120%;}
 	.cont-pre {margin:40px 0 0;}
 	.cont-pre div:first-child {padding-left:0;}
 	.cont-pre div:last-child {padding-right:0;}
@@ -96,7 +98,7 @@ header {
 }
 #bases {padding:90px 0; background:@light-blue; text-align:center; border-bottom:1px solid @border-grey;}
 #bases {
-	.cont-descarga {margin:0 auto; float:none;}
+	.cont-descarga {margin:0 auto 40px; float:none;}
 	.cont-descarga {
 		p {margin:0 50px 40px;}
 		a {display:block; color:@dark-grey;}
@@ -185,10 +187,10 @@ header {
 	.cont-formulario {width:100%;}
 	h3.title {margin:10px 0 30px; text-align:center;}
 	h4 {font-size:18px !important;}
-	.excerpt {margin:0 0 20px; font-size:14px; text-align:center; color:@base-blue;}
+	.excerpt {margin:0 25px 20px; font-size:14px; text-align:center; color:@base-blue;}
 	.separa {
 		div:first-child {padding-left:0;}
-		div:last-child {padding-right:0;}
+		div:last-child, .last-div {padding-right:0;}
 	}
 }
 

@@ -166,53 +166,7 @@ Template Name: Home
                         </div>
                     </div>
                 </div>
-                <div id="programa">
-                    <div class="container clearfix">
-                        <div class="cont-programa col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <h3>Programa 2016</h3>
-                            <div class="clearfix">
-                                <ul>
-                                    <li><strong>Jueves 17 de marzo:</strong> 8:30 a 18:00 horas – Vino de honor de 18:00 a 19:30 horas incluido en el valor del congreso.</li>
-                                    <li><strong>Viernes 18 de marzo:</strong> 9:00 a 18:00 horas</li>
-                                    <li><strong>Sábado 19 de marzo:</strong> 9:00 a 12:30 horas – Visita con almuerzo a Viña Santa Rita (no incluido en valor del congreso – participación por adhesión). Retorno al hotel, horario estimado: xx horas</li>
-                                </ul>
-                            </div>
-                            <div class="clearfix cont-pre">
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                    <h4>Temario de Programa Preliminar:</h4>
-                                    <ul>
-                                        <li>Tratamiento interdisciplinario de pacientes con compromiso en cabeza y cuello.</li>
-                                        <li>Planificación funcional en reconstrucción maxilofacial.</li>
-                                        <li>Diseño con tecnología 3D aplicado en reconstrucción facial.</li>
-                                        <li>Resultados funcionales – nuevo estándar mundial.</li>
-                                        <li>Avances tecnológicos en prótesis faciales.</li>
-                                        <li>Tratamiento odontológico en pacientes con cáncer oral.</li>
-                                        <li>Manejo del paciente irradiado.</li>
-                                        <li>Implantes oseointegrados y reconstrucción maxilofacial.</li>
-                                        <li>Uso de colgajos libres microquirúrgicos en reconstrucción de cabeza y cuello.</li>
-                                        <li>Manejo de fonoaudiología como pilar en la rehabilitación funcional</li>
-                                    </ul>
-                                </div>
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                    <h4>Congreso dirigido a:</h4>
-                                    <ul>
-                                        <li>Odontólogos</li>
-                                         <li>Cirujanos Oral y Maxilofacial</li>
-                                         <li>Cirujanos de Cabeza y Cuello</li>
-                                         <li>Cirujanos Plásticos</li>
-                                         <li>Fonoaudiología</li>
-                                         <li>Diseñadores</li>
-                                         <li>Tecnólogos</li>
-                                         <li>Técnicos afines</li>
-                                    </ul>   
-                                </div>  
-                                <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                    <img src="<?php bloginfo('template_directory'); ?>/imag/back/bg-logo.png" alt="logo congreso" class="img-responsive" />
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <?php if(function_exists('programa_pages')) programa_pages("id=".$post->ID."&class=pp&childs=true"); ?>
                 <?php if(function_exists('base_pages')) base_pages("id=".$post->ID."&class=bp&childs=true"); ?>
                 <div id="social">
                     <div class="container clearfix">
@@ -247,7 +201,7 @@ Template Name: Home
                                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
                                         <h5>Sábado 19 de Marzo a las 12:30</h5>
                                         <p>Salida a Visita con Almuerzo a Viña Santa Rita<br />Valor de Adhesión a Visita (no incluido en el valor del Congreso): CLP 65.000</p>
-                                        <p>Programa incluye: Traslado Universidad de Los Andes – Viña Santa Rita – Hotel Plaza El Bosque</p>
+                                        <p>Programa incluye: Traslado Universidad de Los Andes - Viña Santa Rita - Hotel Plaza El Bosque</p>
                                     </div>
                                 </div>
                             </div>
