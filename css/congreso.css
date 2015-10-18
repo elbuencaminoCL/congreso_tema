@@ -18,6 +18,7 @@ a {
   color: #0076bf;
   cursor: pointer;
 }
+a:focus,
 a:hover {
   text-decoration: none;
   background: none;
@@ -225,15 +226,20 @@ header #lg-nav h2 {
   float: none;
 }
 #programa {
-  padding: 70px 0 80px;
+  position: relative;
+  padding: 0;
   text-align: center;
   border-bottom: 1px solid #bebdbd;
-  background: url(../imag/back/bg-santiago1.jpg) no-repeat left top #eae8e8;
+  background: url(../imag/back/bg-santiago1.jpg) no-repeat fixed #eae8e8;
+}
+#programa h3 {
+  color: #ffffff;
 }
 #programa h4 {
   margin: 0 5px 25px;
   text-align: left;
   text-transform: uppercase;
+  color: #ffffff;
 }
 #programa ul {
   margin: 0;
@@ -244,6 +250,7 @@ header #lg-nav h2 {
   font-size: 13px;
   list-style-type: none;
   line-height: 120%;
+  color: #ffffff;
 }
 #programa .cont-pre {
   margin: 40px 0 0;
@@ -257,8 +264,16 @@ header #lg-nav h2 {
 #programa .cont-programa div {
   text-align: left;
 }
+#programa .cont-layer {
+  position: relative;
+  padding: 70px 0 80px;
+  background: url(../imag/back/bg-cont.png) repeat left top;
+  z-index: 800;
+  min-height: 740px;
+  text-align: center;
+}
 #bases {
-  padding: 90px 0;
+  padding: 90px 0 100px;
   background: #cfdae5;
   text-align: center;
   border-bottom: 1px solid #bebdbd;
@@ -518,6 +533,7 @@ header #lg-nav h2 {
 .cont-formulario input[type="telefono"],
 .cont-formulario select {
   padding: 5px 10px;
+  width: 100%;
   font-size: 14px;
   color: #666666;
   height: 40px;

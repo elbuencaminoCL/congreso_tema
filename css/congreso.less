@@ -23,7 +23,7 @@ body {font-family:@family;}
 h3 {margin:0 0 50px; font-size:25px; font-weight:600; color:@base-blue; text-transform:uppercase; line-height:140%;}
 h4 {color:@base-blue;}
 a {color:@base-blue; cursor:pointer;}
-a:hover {text-decoration:none; background:none;}
+a:focus, a:hover {text-decoration:none; background:none;}
 .cont-site {padding:0;}
 
 /*HEADER*/
@@ -86,17 +86,19 @@ header {
 	.cont-org {text-align:center;}
 	.item-logo {margin:0 0 60px; display:inline-block; float:none;}
 }
-#programa {padding:70px 0 80px; text-align:center; border-bottom:1px solid @border-grey; background: url(../imag/back/bg-santiago1.jpg) no-repeat left top @back-grey;}
+#programa {position:relative; padding:0; text-align:center; border-bottom:1px solid @border-grey; background: url(../imag/back/bg-santiago1.jpg) no-repeat fixed @back-grey;}
 #programa {
-	h4 {margin:0 5px 25px; text-align:left; text-transform:uppercase;}
+	h3 {color:@white;}
+	h4 {margin:0 5px 25px; text-align:left; text-transform:uppercase; color:@white;}
 	ul {margin:0; padding:0;}
-	ul li {margin:0 5px 15px; font-size:13px; list-style-type:none; line-height:120%;}
+	ul li {margin:0 5px 15px; font-size:13px; list-style-type:none; line-height:120%; color:@white;}
 	.cont-pre {margin:40px 0 0;}
 	.cont-pre div:first-child {padding-left:0;}
 	.cont-pre div:last-child {padding-right:0;}
 	.cont-programa div {text-align:left;}
+	.cont-layer {position:relative; padding:70px 0 80px; background:url(../imag/back/bg-cont.png) repeat left top; z-index:800; min-height:740px; text-align:center;}
 }
-#bases {padding:90px 0; background:@light-blue; text-align:center; border-bottom:1px solid @border-grey;}
+#bases {padding:90px 0 100px; background:@light-blue; text-align:center; border-bottom:1px solid @border-grey;}
 #bases {
 	.cont-descarga {margin:0 auto 40px; float:none;}
 	.cont-descarga {
@@ -165,7 +167,7 @@ header {
 		div:last-child, .last-div {padding-right:0;}
 	}
 	label {margin:0; padding:0 0 8px; font-size:14px; color:@dark-grey; font-weight:400; text-align:left;}
-	input[type="text"], input[type="email"], input[type="telefono"], select {padding:5px 10px; font-size:14px; color:@medium-grey; height:40px;}
+	input[type="text"], input[type="email"], input[type="telefono"], select {padding:5px 10px; width:100%; font-size:14px; color:@medium-grey; height:40px;}
 	textarea {width:100%; padding:5px 10px; font-size:14px; color:@medium-grey; height:150px; border:1px solid #ccc; .rounded-corners (@radius:4px);}
 	input[type="submit"].descargar {margin-bottom:0; background:@base-blue; color:@white;}
 	input[type="submit"].descargar:hover {background:@pink; border:2px solid @pink;}

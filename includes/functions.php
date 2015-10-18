@@ -19,6 +19,8 @@ function wpse_setup_theme() {
     if ( function_exists( 'add_image_size' ) ) { 
         add_image_size( 'main-image', 370, 180, true);
         add_image_size( 'logos-image', 155, 60, true);
+        add_image_size( 'expositores', 255, 346, true);
+        add_image_size( 'logo', 300, 145, true);
     }
 } 
 add_action( 'after_setup_theme', 'wpse_setup_theme' );
@@ -122,7 +124,7 @@ global $wpdb;
                             echo $bpages->post_content;
                         echo '</div>';
                         echo '<div class="cont-button clearfix">';
-                            echo '<a href="'.$link.'" class="descargar">'.$texto.'</a>';
+                            echo '<a href="'.get_bloginfo('wpurl').'/'.$link.'" class="descargar" target="_blank">'.$texto.'</a>';
                         echo '</div>';
                     echo '</div>';
                 echo '</div>';
@@ -148,6 +150,7 @@ global $wpdb;
                 $dia1 = get_post_meta( $ppages->ID, '_programa_dia_1', true);
                 $dia2 = get_post_meta( $ppages->ID, '_programa_dia_2', true);
                 echo '<div id="programa">';
+                echo '<div class="cont-layer">';
                     echo '<div class="container clearfix">';
                         echo '<div class="cont-programa col-lg-12 col-md-12 col-sm-12 col-xs-12">';
                             echo '<h3>'.$ppages->post_title.'</h3>';
@@ -156,11 +159,12 @@ global $wpdb;
                                 echo '<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">'.$dia1.'</div>';
                                 echo '<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">'.$dia2.'</div>';
                                 echo '<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">';
-                                    echo '<img src="'.bloginfo('template_directory').'/imag/back/bg-logo.png" alt="logo congreso" class="img-responsive" />';
+                                    echo get_the_post_thumbnail($ppages->ID, 'logo', array('class' => 'img-responsive'));
                                 echo '</div>';
                             echo '</div>';
                         echo '</div>';
                     echo '</div>';
+                echo '</div>';
                 echo '</div>';
             $i++; }
         }

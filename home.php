@@ -55,78 +55,25 @@ Template Name: Home
                     <div class="container clearfix">
                         <div class="cont-expositores col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <h3>Expositores</h3>
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                <div class="item-expo">
-                                    <div class="cont-image">
-                                        <a href="#" id="pop-johan"><img src="<?php bloginfo('template_directory'); ?>/imag/expo/johan.jpg" alt="Dr. Johan Wolfaardt" class="img-responsive" /></a>
-                                    </div>
-                                    <h4>Dr. Johan Wolfaardt</h4>
-                                    <h5>Canadá</h5>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-                                <div class="item-expo">
-                                    <div class="cont-image">
-                                        <a href="#" id="pop-hadi"><img src="<?php bloginfo('template_directory'); ?>/imag/expo/hadi.jpg" alt="Dr. Hadi Seikaly" class="img-responsive" />
-                                    </a></div>
-                                    <h4>Dr. Hadi Seikaly</h4>
-                                    <h5>Canadá</h5>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                <div class="item-expo">
-                                    <div class="cont-image">
-                                        <a href="#" id="pop-jana"><img src="<?php bloginfo('template_directory'); ?>/imag/expo/jana.jpg" alt="Dra. Jana Rieger" class="img-responsive" />
-                                    </a></div>
-                                    <h4>Dra. Jana Rieger</h4>
-                                    <h5>Canadá</h5>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                <div class="item-expo">
-                                    <div class="cont-image">
-                                        <a href="#" id="pop-harry"><img src="<?php bloginfo('template_directory'); ?>/imag/expo/harry.jpg" alt="Dr. Harry Reintsema" class="img-responsive" /></a>
-                                    </div>
-                                    <h4>Dr. Harry Reintsema</h4>
-                                    <h5>Holanda</h5>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                <div class="item-expo">
-                                    <div class="cont-image">
-                                        <a href="#" id="pop-trevor"><img src="<?php bloginfo('template_directory'); ?>/imag/expo/trevor.jpg" alt="Dr. Trevor Coward" class="img-responsive" /></a>
-                                    </div>
-                                    <h4>Dr. Trevor Coward</h4>
-                                    <h5>Inglaterra</h5>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                <div class="item-expo">
-                                    <div class="cont-image">
-                                        <a href="#" id="pop-luciano"><img src="<?php bloginfo('template_directory'); ?>/imag/expo/luciano.jpg" alt="Dr. Luciano Dib" class="img-responsive" /></a>
-                                    </div>
-                                    <h4>Dr. Luciano Dib</h4>
-                                    <h5>Brasil</h5>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                <div class="item-expo">
-                                    <div class="cont-image">
-                                        <a href="#" id="pop-freddy"><img src="<?php bloginfo('template_directory'); ?>/imag/expo/freddy.jpg" alt="Dr. Freddy Álvarez" class="img-responsive" /></a>
-                                    </div>
-                                    <h4>Dr. Freddy Álvarez</h4>
-                                    <h5>Cuba</h5>
-                                </div>
-                            </div>
-                            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">
-                                <div class="item-expo">
-                                    <div class="cont-image">
-                                        <a href="#" id="pop-rosemary"><img src="<?php bloginfo('template_directory'); ?>/imag/expo/rosemary.jpg" alt="Dra. Rosemary Seelaus" class="img-responsive" /></a>
-                                    </div>
-                                    <h4>Dra. Rosemary Seelaus</h4>
-                                    <h5>Estados Unidos</h5>
-                                </div>
-                            </div>
+                            <?php global $query_string;
+                            query_posts( $query_string . '&post_type=expositores' );?>
+                                <?php if (have_posts()) : ?>
+                                    <?php while (have_posts()) : the_post(); ?>
+                                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                                            <div class="item-expo">
+                                                <div class="cont-image">
+                                                    <a href="#" id="pop-<? echo $post->post_name;?>"><?php echo get_the_post_thumbnail($page->ID, 'expositores', array('class' => 'img-responsive'));?></a>
+                                                </div>
+                                                <h4><? the_title();?></h4>
+                                                <h5>
+                                                    <? $pais = get_field('_indicar_pais');
+                                                    echo $pais; ?>
+                                                </h5>
+                                            </div>
+                                        </div>
+                                    <?php endwhile;?>
+                                <?php endif; ?>
+                            <?php wp_reset_query();?>
                         </div>
                     </div>
                 </div>

@@ -37,6 +37,7 @@
 		$(document).ready(function(){
 			$('#inicio').parallax("50%", 0.1);
 			$('#intro').parallax("50%", 0.3);
+			$('#programa').parallax("50%", 0.3);
 			$('#ubicacion').parallax("50%", 0.1);
 			$('#auspiciadores').parallax("50%", 0.3);
 			$('#main-nav').affix({
@@ -61,37 +62,37 @@
 	<script>
 		;(function($) {
 	        $(function() {
-				$('#pop-johan').bind('click', function(e) {
+				$('#pop-dr-johan-wolfaardt').bind('click', function(e) {
 					e.preventDefault();
-					$('#cv-johan').bPopup();
+					$('#cv-dr-johan-wolfaardt').bPopup();
 	            });
-	            $('#pop-hadi').bind('click', function(e) {
+	            $('#pop-dr-hadi-seikaly').bind('click', function(e) {
 					e.preventDefault();
-					$('#cv-hadi').bPopup();
+					$('#cv-dr-hadi-seikaly').bPopup();
 	            });
-	            $('#pop-jana').bind('click', function(e) {
+	            $('#pop-dra-jana-rieger').bind('click', function(e) {
 					e.preventDefault();
-					$('#cv-jana').bPopup();
+					$('#cv-dra-jana-rieger').bPopup();
 	            });
-	            $('#pop-trevor').bind('click', function(e) {
+	            $('#pop-dr-harry-reintsema').bind('click', function(e) {
 					e.preventDefault();
-					$('#cv-trevor').bPopup();
+					$('#cv-dr-harry-reintsema').bPopup();
 	            });
-	            $('#pop-harry').bind('click', function(e) {
+	            $('#pop-dr-trevor-coward').bind('click', function(e) {
 					e.preventDefault();
-					$('#cv-harry').bPopup();
+					$('#cv-dr-trevor-coward').bPopup();
 	            });
-	            $('#pop-luciano').bind('click', function(e) {
+	            $('#pop-dr-luciano-dib').bind('click', function(e) {
 					e.preventDefault();
-					$('#cv-luciano').bPopup();
+					$('#cv-dr-luciano-dib').bPopup();
 	            });
-	            $('#pop-freddy').bind('click', function(e) {
+	            $('#pop-dr-freddy-alvarez').bind('click', function(e) {
 					e.preventDefault();
-					$('#cv-freddy').bPopup();
+					$('#cv-dr-freddy-alvarez').bPopup();
 	            });
-	            $('#pop-rosemary').bind('click', function(e) {
+	            $('#pop-dra-rosemary-seelaus').bind('click', function(e) {
 					e.preventDefault();
-					$('#cv-rosemary').bPopup();
+					$('#cv-dra-rosemary-seelaus').bPopup();
 	            });
 	            $('#pop-inscripcion').bind('click', function(e) {
 					e.preventDefault();
