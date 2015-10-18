@@ -166,7 +166,7 @@ header {
 		div:first-child {padding-left:0;}
 		div:last-child, .last-div {padding-right:0;}
 	}
-	label {margin:0; padding:0 0 8px; font-size:14px; color:@dark-grey; font-weight:400; text-align:left;}
+	label {margin:0; padding:0 0 8px; width:100%; font-size:14px; color:@dark-grey; font-weight:400; text-align:left;}
 	input[type="text"], input[type="email"], input[type="telefono"], select {padding:5px 10px; width:100%; font-size:14px; color:@medium-grey; height:40px;}
 	textarea {width:100%; padding:5px 10px; font-size:14px; color:@medium-grey; height:150px; border:1px solid #ccc; .rounded-corners (@radius:4px);}
 	input[type="submit"].descargar {margin-bottom:0; background:@base-blue; color:@white;}
@@ -175,13 +175,14 @@ header {
 	.cont-button {margin:0 0 50px; text-align:center;}
 	.cont-button a {margin:0 auto; background:@base-blue; color:@white;}
 	.cont-button a:hover {background:@pink; border:2px solid @pink;}
+	.wpcf7-list-item-label {margin-right:30px;}
 	.cabecera {margin:15px 0 0; padding:12px 0; background:@white; font-size:13px; font-weight:600;}
 	.cabecera div:last-child, .cabecera div:nth-child(2) {padding:0}
 	.content-valores {margin:0 0 50px;}
 	.content-valores {
 		h4 {margin-bottom:25px;}
 		p {margin:0 0 5px;}
-		.clearfix {padding:12px 0; font-size:13px;}
+		.clearfix {padding:12px 0; font-size:13px; border-bottom:1px solid #ccc;}
 	}
 }
 .bForm {background:@back-grey; .rounded-corners (@radius:10px); box-shadow: 0 0 25px 5px #999; min-width:450px; max-width:700px; padding:25px 25px 15px;}
