@@ -577,6 +577,9 @@ header #lg-nav h2 {
   background: #c96565;
   border: 2px solid #c96565;
 }
+.cont-formulario .cont-button.separa {
+  margin-bottom: 40px;
+}
 .cont-formulario .wpcf7-list-item-label {
   margin-right: 30px;
 }

@@ -60,35 +60,24 @@ function congreso_theme_options_do_page() {
         <form method="post" action="options.php">
             <?php settings_fields('congreso_options'); ?>
             <?php $options = get_option('congreso_theme_options'); ?>
-
             <div id="rwd" class="grid col-940">
-                <h3 class="rwd-toggle"><a href="#"><?php _e('Opciones Generales sitio - header (Redes Sociales)', 'congreso'); ?></a></h3>
+                <h3 class="rwd-toggle"><a href="#"><?php _e('Opciones Generales sitio - inicio', 'congreso'); ?></a></h3>
                 <div class="rwd-container">
                     <div class="rwd-block">
                         <?php
                         /**
-                         * Textos para footer
+                         * Textos para inicio
                          */
                         ?>
-                        <div class="grid col-220"><?php _e('Facebook', 'congreso'); ?></div><!-- end of .grid col-300 -->
+                        <div class="grid col-220"><?php _e('Fecha Congreso', 'congreso'); ?></div><!-- end of .grid col-300 -->
                         <div class="grid col-700 fit">
-                            <input id="congreso_theme_options[facebook]" class="regular-text" type="text" name="congreso_theme_options[facebook]" value="<?php if (!empty($options['facebook'])) echo esc_attr($options['facebook']); ?>" />
-                            <label class="description small-text" for="congreso_theme_options[facebook]"><?php _e('Ingrese su página de Facebook', 'congreso'); ?></label>
+                            <input id="congreso_theme_options[fecha]" class="regular-text" type="text" name="congreso_theme_options[fecha]" value="<?php if (!empty($options['fecha'])) echo esc_attr($options['fecha']); ?>" />
+                            <label class="description small-text" for="congreso_theme_options[fecha]"><?php _e('Ingrese la fecha del Congreso', 'congreso'); ?></label>
                         </div><!-- end of .grid col-620 -->
-                        <div class="grid col-220"><?php _e('Instagram', 'congreso'); ?></div><!-- end of .grid col-300 -->
+                        <div class="grid col-220"><?php _e('Lugar Congreso', 'congreso'); ?></div><!-- end of .grid col-300 -->
                         <div class="grid col-700 fit">
-                            <input id="congreso_theme_options[instagram]" class="regular-text" type="text" name="congreso_theme_options[instagram]" value="<?php if (!empty($options['instagram'])) echo esc_attr($options['instagram']); ?>" />
-                            <label class="description small-text" for="congreso_theme_options[instagram]"><?php _e('Ingrese usuario de Instagram', 'congreso'); ?></label>
-                        </div><!-- end of .grid col-620 -->
-                        <div class="grid col-220"><?php _e('Youtube', 'congreso'); ?></div><!-- end of .grid col-300 -->
-                        <div class="grid col-700 fit">
-                            <input id="congreso_theme_options[youtube]" class="regular-text" type="text" name="congreso_theme_options[youtube]" value="<?php if (!empty($options['youtube'])) echo esc_attr($options['youtube']); ?>" />
-                            <label class="description small-text" for="congreso_theme_options[youtube]"><?php _e('Ingrese el usuario de Youtube', 'congreso'); ?></label>
-                        </div><!-- end of .grid col-620 -->
-                        <div class="grid col-220"><?php _e('Google+', 'congreso'); ?></div><!-- end of .grid col-300 -->
-                        <div class="grid col-700 fit">
-                            <input id="congreso_theme_options[google]" class="regular-text" type="text" name="congreso_theme_options[google]" value="<?php if (!empty($options['google'])) echo esc_attr($options['google']); ?>" />
-                            <label class="description small-text" for="congreso_theme_options[google]"><?php _e('Ingrese página de Google+', 'congreso'); ?></label>
+                            <input id="congreso_theme_options[lugar]" class="regular-text" type="text" name="congreso_theme_options[lugar]" value="<?php if (!empty($options['lugar'])) echo esc_attr($options['lugar']); ?>" />
+                            <label class="description small-text" for="congreso_theme_options[lugar]"><?php _e('Ingrese lugar del Congreso', 'congreso'); ?></label>
                         </div><!-- end of .grid col-620 -->
                     </div><!-- end of .rwd-block -->
                 </div><!-- end of .rwd-container -->
@@ -103,20 +92,10 @@ function congreso_theme_options_do_page() {
                          * Textos para footer
                          */
                         ?>
-    					<div class="grid col-220"><?php _e('Dirección', 'congreso'); ?></div><!-- end of .grid col-300 -->
+    					<div class="grid col-220"><?php _e('Texto footer', 'congreso'); ?></div><!-- end of .grid col-300 -->
                         <div class="grid col-700 fit">
-                            <input id="congreso_theme_options[direccion]" class="regular-text" type="text" name="congreso_theme_options[direccion]" value="<?php if (!empty($options['direccion'])) echo esc_attr($options['direccion']); ?>" />
-                            <label class="description small-text" for="congreso_theme_options[direccion]"><?php _e('Ingrese la dirección correspondiente', 'congreso'); ?></label>
-                        </div><!-- end of .grid col-620 -->
-                        <div class="grid col-220"><?php _e('Teléfono', 'congreso'); ?></div><!-- end of .grid col-300 -->
-                        <div class="grid col-700 fit">
-                            <input id="congreso_theme_options[telefono]" class="regular-text" type="text" name="congreso_theme_options[telefono]" value="<?php if (!empty($options['telefono'])) echo esc_attr($options['telefono']); ?>" />
-                            <label class="description small-text" for="congreso_theme_options[telefono]"><?php _e('Ingrese el (los) teléfonos respectivos', 'congreso'); ?></label>
-                        </div><!-- end of .grid col-620 -->
-                        <div class="grid col-220"><?php _e('E-mail', 'congreso'); ?></div><!-- end of .grid col-300 -->
-                        <div class="grid col-700 fit">
-                            <input id="congreso_theme_options[email]" class="regular-text" type="text" name="congreso_theme_options[email]" value="<?php if (!empty($options['email'])) echo esc_attr($options['email']); ?>" />
-                            <label class="description small-text" for="congreso_theme_options[email]"><?php _e('Ingrese el e-mail correspondiente', 'congreso'); ?></label>
+                            <input id="congreso_theme_options[texto_footer]" class="regular-text" type="text" name="congreso_theme_options[texto_footer]" value="<?php if (!empty($options['texto_footer'])) echo esc_attr($options['texto_footer']); ?>" />
+                            <label class="description small-text" for="congreso_theme_options[texto_footer]"><?php _e('Ingrese texto que aparecerá en el footer del sitio', 'congreso'); ?></label>
                             <p class="submit">
                                 <input type="submit" class="button-primary" value="<?php _e('Guardar opciones', 'congreso'); ?>" />
                             </p>

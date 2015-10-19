@@ -36,6 +36,24 @@
                     ?>
                 </div>
             </div>
+            <div id="form-contacto" class="hidden-div bForm">
+                <span class="button b-close"><span>Cerrar</span></span>
+                <div class="content">
+                    <?php 
+                        $page = get_posts(
+                            array(
+                                'name'      => 'contacto',
+                                'post_type' => 'page'
+                            )
+                        );
+                        if ($page){
+                            echo '<h3 class="title">'.$page[0]->post_title.'</h3>';
+                            echo '<div class="excerpt">'.$page[0]->post_excerpt.'</div>';
+                            echo do_shortcode( '[contact-form-7 id="28" title="Formulario de Contacto"]' );
+                        }
+                    ?>
+                </div>
+            </div>
             <!--/POPUP-->
     	<script src="<?php bloginfo('template_directory'); ?>/js/jquery.easing.1.3.js"></script>
 		<?php } else { ?>

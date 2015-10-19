@@ -29,7 +29,6 @@
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.parallax-1.1.3.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.localscroll-1.2.7-min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.scrollTo-1.4.2-min.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_directory'); ?>/js/jquery.colorbox.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/jquery.bpopup-0.11.0.min.js"></script>
 <script src="<?php bloginfo('template_directory'); ?>/js/bootstrap.min.js" type="text/javascript"></script>
 <?php if ( is_page('inicio') || is_front_page() ) { ?>
@@ -45,7 +44,7 @@
 			        top: 695
 			    }
 			});	
-			$('#main-nav a[href^="#"]').on('click',function (e) {
+			$('#main-nav li.menu a[href^="#"]').on('click',function (e) {
 			    e.preventDefault();
 			    var target = this.hash;
 			    var $target = $(target);
@@ -55,8 +54,8 @@
 			        window.location.hash = target;
 			    });
 			});
-			$('li.contacto a').addClass("ajax");
-			$(".ajax").colorbox();
+			$('li.contacto a').addClass('descargar');
+			$('li.contacto a').attr('id', 'pop-contacto');
 		})
 	</script>
 	<script>
@@ -97,6 +96,10 @@
 	            $('#pop-inscripcion').bind('click', function(e) {
 					e.preventDefault();
 					$('#form-inscripcion').bPopup();
+	            });
+	            $('#pop-contacto').bind('click', function(e) {
+					e.preventDefault();
+					$('#form-contacto').bPopup();
 	            });
 	        });
 	    })(jQuery);
