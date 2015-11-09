@@ -46,7 +46,7 @@ header #lg-nav h2 {
   position: relative;
   margin: 0 auto;
   padding: 0;
-  background: url(../imag/back/bg-santiago2.jpg) 50% 0 repeat fixed;
+  background: url(../imag/back/bg-santiago2.jpg) 50% 0 repeat;
   text-align: center;
   height: 740px;
 }
@@ -108,7 +108,7 @@ header #lg-nav h2 {
   min-height: auto;
 }
 #inicio .cont-site {
-  padding: 200px 0 0;
+  padding: 110px 0 0;
   text-align: center;
 }
 #inicio .cont-site h1 {
@@ -209,6 +209,7 @@ header #lg-nav h2 {
   margin: 0 0 20px;
   display: inline-block;
   float: none;
+  vertical-align: middle;
 }
 #organizadores .media {
   text-align: center;
@@ -223,14 +224,20 @@ header #lg-nav h2 {
 #auspiciadores .item-logo {
   margin: 0 0 60px;
   display: inline-block;
-  float: none;
+  vertical-align: middle;
+}
+#auspiciadores .item-logo:first-child img {
+  width: 100%;
+}
+#auspiciadores .item-logo img {
+  margin: 0 auto;
 }
 #programa {
   position: relative;
   padding: 0;
   text-align: center;
   border-bottom: 1px solid #bebdbd;
-  background: url(../imag/back/bg-santiago1.jpg) no-repeat fixed #eae8e8;
+  background: url(../imag/back/bg-santiago1.jpg) no-repeat center top #eae8e8;
 }
 #programa h3 {
   color: #ffffff;
@@ -306,7 +313,8 @@ header #lg-nav h2 {
 #social .item-social:last-child {
   margin-left: 15px !important;
 }
-#social .item-social a {
+#social .item-social a,
+#social .item-social .cont-social {
   position: relative;
   display: block;
   -webkit-border-radius: 10px;
@@ -375,7 +383,7 @@ header #lg-nav h2 {
   position: relative;
   height: 700px;
   overflow: hidden;
-  background: url(../imag/back/bg-campus.jpg) 50% -300px no-repeat fixed !important;
+  background: url(../imag/back/bg-campus.jpg) no-repeat center top !important;
   border-bottom: 1px solid #bebdbd;
 }
 #ubicacion h3 {
@@ -390,7 +398,7 @@ header #lg-nav h2 {
 }
 #ubicacion .cont-layer {
   position: relative;
-  padding: 90px 0 40px;
+  padding: 120px 0 40px;
   background: url(../imag/back/bg-cont.png) repeat left top;
   z-index: 800;
   min-height: 740px;
@@ -500,6 +508,9 @@ header #lg-nav h2 {
   background: #0076bf;
   color: #ffffff !important;
   border: 2px solid #0076bf;
+}
+.cont-imag {
+  margin: 30px 0;
 }
 /*FORMS*/
 .bform {

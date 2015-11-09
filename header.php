@@ -14,6 +14,7 @@
 <meta name="description" content=""> 
 <?php endif; ?>
 <meta name="keywords" content="" />	
+<meta name="msvalidate.01" content="14394656F4F99B3FA85F80F17EBD0C32" />
 <?php if(is_home() || is_single() || is_page()) { echo '<meta name="robots" content="index,follow" />'; } else { echo '<meta name="robots" content="noindex,follow" />'; } ?>
 <link rel="alternate" type="application/rss+xml" title="RSS 2.0" href="<?php if ( get_option('woo_feedburner_url') <> "" ) { echo get_option('woo_feedburner_url'); } else { echo get_bloginfo_rss('rss2_url'); } ?>" />
 <link rel="profile" href="http://gmpg.org/xfn/11" />
@@ -34,11 +35,11 @@
 <?php if ( is_page('inicio') || is_front_page() ) { ?>
 	<script type="text/javascript">
 		$(document).ready(function(){
-			$('#inicio').parallax("50%", 0.1);
-			$('#intro').parallax("50%", 0.3);
-			$('#programa').parallax("50%", 0.3);
-			$('#ubicacion').parallax("50%", 0.1);
-			$('#auspiciadores').parallax("50%", 0.3);
+			//$('#inicio').parallax("50%", 0.1);
+			//$('#intro').parallax("50%", 0.3);
+			//$('#programa').parallax("50%", 0.3);
+			//$('#ubicacion').parallax("50%", 0.1);
+			//$('#auspiciadores').parallax("50%", 0.3);
 			$('#main-nav').affix({
 			    offset: {
 			        top: 695
@@ -101,6 +102,26 @@
 					e.preventDefault();
 					$('#form-contacto').bPopup();
 	            });
+	            $('#pop-mapa').bind('click', function(e) {
+					e.preventDefault();
+					$('#mapa').bPopup();
+	            });
+	            $('#pop-como-llegar').bind('click', function(e) {
+					e.preventDefault();
+					$('#como-llegar').bPopup();
+	            });
+	            $('#pop-info-viaje').bind('click', function(e) {
+					e.preventDefault();
+					$('#info-viaje').bPopup();
+	            });
+	            $('#pop-servicio').bind('click', function(e) {
+					e.preventDefault();
+					$('#servicio').bPopup();
+	            });
+	            $('#pop-recorrido').bind('click', function(e) {
+					e.preventDefault();
+					$('#recorrido').bPopup();
+	            });
 	        });
 	    })(jQuery);
 	</script>
@@ -108,6 +129,15 @@
 <!--[if lt IE 9]>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.js"></script>
 <![endif]-->
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-44982249-9', 'auto');
+	ga('send', 'pageview');
+</script>
 <?php wp_head();?>
 </head>
 
@@ -115,11 +145,11 @@
 	<?php if ( is_page('inicio') || is_front_page() ) { ?>
 		<div id="wrapper">
 			<header id="header" class="clearfix">
-				<div class="container">
+				<!--<div class="container">
 				    <nav id="lg-nav">
 				    	<?php dynamic_sidebar( 'sidebar-general' ); ?>
 				    </nav>
-				</div>
+				</div>-->
 			</header>
 	<?php } else { ?>
 		<header style="display:none;"></header>

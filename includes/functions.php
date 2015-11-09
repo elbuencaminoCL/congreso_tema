@@ -18,7 +18,7 @@ function wpse_setup_theme() {
     }
     if ( function_exists( 'add_image_size' ) ) { 
         add_image_size( 'main-image', 370, 180, true);
-        add_image_size( 'logos-image', 155, 60, true);
+        add_image_size( 'logos-image', 250, 80, false);
         add_image_size( 'expositores', 255, 346, true);
         add_image_size( 'logo', 300, 145, true);
     }

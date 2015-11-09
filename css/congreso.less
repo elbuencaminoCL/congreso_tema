@@ -35,7 +35,7 @@ header {
 }
 
 /*CONTENT*/
-#inicio {position:relative; margin:0 auto; padding:0; background:url(../imag/back/bg-santiago2.jpg) 50% 0 repeat fixed; text-align:center; height:740px;}
+#inicio {position:relative; margin:0 auto; padding:0; background:url(../imag/back/bg-santiago2.jpg) 50% 0 repeat; text-align:center; height:740px;}
 #inicio {
 	.bg {position:absolute; top:0; left:0; height:740px; overflow:hidden;}
 	#main-nav {position:absolute; width:100%; bottom:0; left:0; text-align:center; padding:12px 0; background:url(../imag/back/bg-nav.png) repeat left top; z-index:900; height:47px;}
@@ -48,7 +48,7 @@ header {
 	}
 	#main-nav.affix {position:fixed; top:0px; width:100%; z-index:1000; height:47px;}
 	.navbar {margin:0; min-height:auto;}
-	.cont-site {padding:200px 0 0; text-align:center;}
+	.cont-site {padding:110px 0 0; text-align:center;}
 	.cont-site {
 		h1 {text-align:center;}
 		h3 {margin:0 0 15px; color:@white; font-size:16px; text-transform:none;}
@@ -78,15 +78,17 @@ header {
 #organizadores, #auspiciadores {padding:80px 0 55px; text-align:center; border-bottom:1px solid @border-grey;}
 #organizadores {
 	h3 {margin-bottom:30px;}
-	.item-logo {margin:0 0 20px; display:inline-block; float:none;}
+	.item-logo {margin:0 0 20px; display:inline-block; float:none; vertical-align:middle;}
 	.media {text-align:center;}
 	.media .item-logo {float:none; margin:0 auto;}
 }
 #auspiciadores {
 	.cont-org {text-align:center;}
-	.item-logo {margin:0 0 60px; display:inline-block; float:none;}
+	.item-logo {margin:0 0 60px; display:inline-block; vertical-align:middle;}
+	.item-logo:first-child img {width:100%;}
+	.item-logo img {margin:0 auto;}
 }
-#programa {position:relative; padding:0; text-align:center; border-bottom:1px solid @border-grey; background: url(../imag/back/bg-santiago1.jpg) no-repeat fixed @back-grey;}
+#programa {position:relative; padding:0; text-align:center; border-bottom:1px solid @border-grey; background: url(../imag/back/bg-santiago1.jpg) no-repeat center top @back-grey;}
 #programa {
 	h3 {color:@white;}
 	h4 {margin:0 5px 25px; text-align:left; text-transform:uppercase; color:@white;}
@@ -112,7 +114,7 @@ header {
 	.item-social {margin:0 0 50px;}
 	.item-social:first-child {margin-right:15px !important;}
 	.item-social:last-child {margin-left:15px !important;}
-	.item-social a {position:relative; display:block; .rounded-corners (@radius:10px); min-height:300px; max-height:300px; overflow:hidden; -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.7); -moz-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.7); box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.7);}
+	.item-social a, .item-social .cont-social {position:relative; display:block; .rounded-corners (@radius:10px); min-height:300px; max-height:300px; overflow:hidden; -webkit-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.7); -moz-box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.7); box-shadow: 0px 2px 4px 0px rgba(50, 50, 50, 0.7);}
 	.item-social {
 		h4 {position:absolute; display:block; width:100%; padding:0 70px; color:@white; bottom:25px; text-align:center; font-weight:600; font-size:20px; z-index:900;}
 		a:hover h4 {text-decoration:underline;}
@@ -128,11 +130,11 @@ header {
 		div {padding:0 30px;}
 	}
 }
-#ubicacion {position:relative; height:700px; overflow:hidden; background:url(../imag/back/bg-campus.jpg) 50% -300px no-repeat fixed !important; border-bottom:1px solid @border-grey;}
+#ubicacion {position:relative; height:700px; overflow:hidden; background:url(../imag/back/bg-campus.jpg) no-repeat center top !important; border-bottom:1px solid @border-grey;}
 #ubicacion {
 	h3 {color:@white;}
 	.bg {position:absolute; top:0; left:0; height:740px; overflow:hidden;}
-	.cont-layer {position:relative; padding:90px 0 40px; background:url(../imag/back/bg-cont.png) repeat left top; z-index:800; min-height:740px; text-align:center;}
+	.cont-layer {position:relative; padding:120px 0 40px; background:url(../imag/back/bg-cont.png) repeat left top; z-index:800; min-height:740px; text-align:center;}
 	.recuadro {margin:70px 0;}
 	.recuadro {
 		h4 {font-size:16px; color:@white; font-weight:700;}
@@ -156,6 +158,7 @@ header {
 	a.descargar, input.descargar {display:inline-block; padding:8px 30px; color:@base-blue; font-size:13px; font-weight:700; .rounded-corners (@radius:5px); border:2px solid @base-blue; text-transform:uppercase;}
 	a.descargar:hover, input.descargar:hover {background:@base-blue; color:@white !important; border:2px solid @base-blue;}
 }
+.cont-imag {margin:30px 0;}
 
 /*FORMS*/
 .bform {width:650px !important; background:@back-grey !important;}
