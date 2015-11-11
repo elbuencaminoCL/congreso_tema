@@ -1,4 +1,8 @@
-		<?php if ( is_page('inicio') || is_front_page() ) { ?>
+		<? 
+            define('MY_CUR_LANG',$my_transposh_plugin->target_language);
+            global $my_transposh_plugin;
+        ?>
+        <?php if ( is_page('inicio') || is_front_page() ) { ?>
 				<footer class="clearfix">
 					<div class="container clearfix">
 						<p>XIII Congreso Latinoamericano de Rehabilitación de la Cara y Prótesis Maxilofacial 2016. Todos los derechos reservados.</p>
@@ -31,7 +35,11 @@
                         if ($page){
                             echo '<h3 class="title">'.$page[0]->post_title.'</h3>';
                             echo '<div class="excerpt">'.$page[0]->post_excerpt.'</div>';
-                            echo do_shortcode( '[contact-form-7 id="20" title="Formulario de Inscripción"]' );
+                            if(MY_CUR_LANG == 'es') {
+                                echo do_shortcode( '[contact-form-7 id="20" title="Formulario de Inscripción"]' );
+                            } elseif(MY_CUR_LANG == 'en') {
+                                echo do_shortcode( '[contact-form-7 id="113" title="Formulario de Inscripción (Inglés)"]' );
+                            }
                         }
                     ?>
                 </div>
@@ -49,7 +57,11 @@
                         if ($page){
                             echo '<h3 class="title">'.$page[0]->post_title.'</h3>';
                             echo '<div class="excerpt">'.$page[0]->post_excerpt.'</div>';
-                            echo do_shortcode( '[contact-form-7 id="28" title="Formulario de Contacto"]' );
+                            if(MY_CUR_LANG == 'es') {
+                                echo do_shortcode( '[contact-form-7 id="28" title="Formulario de Contacto"]' );
+                            } elseif(MY_CUR_LANG == 'en') {
+                                echo do_shortcode( '[contact-form-7 id="112" title="Formulario de Contacto (Inglés)"]' );
+                            }
                         }
                     ?>
                 </div>
@@ -80,7 +92,7 @@
                         <img src="<?php bloginfo('template_directory'); ?>/imag/demo/habitacion.jpg" alt="" class="img-responsive col-lg-6 col-md-6 col-sm-6 col-xs-12" />
                     </div>
                     <p>Para otras reservas de hotel, servicios de transporte, tours y excursiones dentro y fuera de Santiago por favor visite: www.turistik.cl</p>
-                    <p>TURISTIK, empresa de turismo que ha recibido importantes distinciones en nuestro país, aplica por primera vez en Chile el innovador circuito Santiago Hop on / Hop off constituido por una flota de buses rojos de 2 pisos. Cuenta con oficinas de ventas y atención en en el Mall Parque Arauco, Patio Bellavista, Mercado Central, Paseo Los Dominicos y Hotel Sheraton. Además, ofrece diversos servicios de transporte (desde y hacia aeropuerto), incluyendo diferentes excursiones entorno a la zona central de Chile y reservas de hotel.</p>
+                    <p>TURISTIK, empresa de turismo que ha recibido importantes distinciones en nuestro país, aplica por primera vez en Chile el innovador circuito Santiago Hop on / Hop off constituido por una flota de buses rojos de dos pisos. Cuenta con oficinas de ventas y atención en en el Mall Parque Arauco, Patio Bellavista, Mercado Central, Paseo Los Dominicos y Hotel Sheraton. Además, ofrece diversos servicios de transporte (desde y hacia aeropuerto), incluyendo diferentes excursiones entorno a la zona central de Chile y reservas de hotel.</p>
                     <p>Mail de contacto para el Congreso 2016: grupos@turistik.cl</p>
                 </div>
             </div>

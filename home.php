@@ -5,6 +5,10 @@ Template Name: Home
 ?>
 
 <?php get_header(); ?>
+    <? 
+        define('MY_CUR_LANG',$my_transposh_plugin->target_language);
+        global $my_transposh_plugin;
+    ?>
     <div class="cont-site col-lg-12 col-md-12 col-sm-12 col-xs-12 clearfix">
         <div id="content" class="clearfix">
             <div id="inicio">
@@ -14,8 +18,19 @@ Template Name: Home
                                 <img src="<?php bloginfo('template_directory'); ?>/imag/logo/logo-soc-white.png" alt="XIII Congreso Latinoamericano de Rehabilitación de la cara y prótesis maxilofacial" class="img-responsive" />
                                 <img src="<?php bloginfo('template_directory'); ?>/imag/logo/logo-white.png" alt="XIII Congreso Latinoamericano de Rehabilitación de la cara y prótesis maxilofacial" class="img-responsive" />
                             </h1>
-                            <h3>Santiago de Chile, 17, 18 y 19 de marzo</h3>
-                            <h3>Aula Magna, Universidad de Los Andes</h3>
+                            <? 
+                                if(MY_CUR_LANG == 'es') {
+                                    $fecha = get_field('_ciudad_y_fecha');
+                                    echo '<h3>'.$fecha.'</h3>'; 
+                                    $lugar = get_field('_lugar');
+                                    echo '<h3>'.$lugar.'</h3>';
+                                } elseif(MY_CUR_LANG == 'en') {
+                                    $date = get_field('_city_and_date');
+                                    echo '<h3>'.$date.'</h3>'; 
+                                    $venue = get_field('_venue');
+                                    echo '<h3>'.$venue.'</h3>';
+                                }
+                            ?>
                             <div class="cont-button clearfix">
                                 <a href="#" id="pop-inscripcion" class="descargar">Inscripciones al Congreso</a>
                             </div>
@@ -83,27 +98,27 @@ Template Name: Home
                 <div id="organizadores">
                     <div class="container clearfix">
                         <div class="cont-org col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="cont-org col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <h3>Organizadores</h3>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 item-logo">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item-logo">
                                     <img src="<?php bloginfo('template_directory'); ?>/imag/logo/soc_latino.jpg" alt="Sociedad Latinoamericana de Rehabilitación de la Cara y Prótesis Bucomaxilofacial" class="img-responsive" />
                                 </div>
-                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 item-logo">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item-logo">
                                     <img src="<?php bloginfo('template_directory'); ?>/imag/logo/ismr.png" alt="ISMR" class="img-responsive" />
                                 </div>
-                                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 item-logo">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item-logo">
                                     <img src="<?php bloginfo('template_directory'); ?>/imag/logo/fundacion.jpg" alt="Fundación OREMA" class="img-responsive" />
                                 </div>
                             </div>
-                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <h3>Patrocinadores</h3>
-                                <div class="col-lg-6 col-md-6 col-sm-5 col-xs-12 item-logo">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item-logo">
                                     <img src="<?php bloginfo('template_directory'); ?>/imag/logo/uandes.jpg" alt="Universidad de Los Andes" class="img-responsive" />
                                 </div>
-                                <div class="col-lg-4 col-md-4 col-sm-5 col-xs-12 item-logo">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item-logo">
                                     <img src="<?php bloginfo('template_directory'); ?>/imag/logo/sociedad.png" alt="Sociedad de Prótesis y Rehabilitación Oral de Chile" class="img-responsive" />
                                 </div>
-                                <div class="col-lg-5 col-md-5 col-sm-5 col-xs-12 item-logo">
+                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item-logo">
                                     <img src="<?php bloginfo('template_directory'); ?>/imag/logo/soc_cirugia.jpg" alt="Sociedad de Prótesis y Rehabilitación Oral de Chile" class="img-responsive" />
                                 </div>
                             </div>

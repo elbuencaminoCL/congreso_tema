@@ -149,15 +149,27 @@ global $wpdb;
             if($ppages->menu_order >= 0){
                 $dia1 = get_post_meta( $ppages->ID, '_programa_dia_1', true);
                 $dia2 = get_post_meta( $ppages->ID, '_programa_dia_2', true);
+                $day1 = get_post_meta( $ppages->ID, '_program_1', true);
+                $day2 = get_post_meta( $ppages->ID, '_program_2', true);
+                $intro = get_post_meta( $ppages->ID, '_intro', true);
                 echo '<div id="programa">';
                 echo '<div class="cont-layer">';
                     echo '<div class="container clearfix">';
                         echo '<div class="cont-programa col-lg-12 col-md-12 col-sm-12 col-xs-12">';
                             echo '<h3>'.$ppages->post_title.'</h3>';
-                            echo '<div class="clearfix">'.$ppages->post_content.'</div>';
+                            if(MY_CUR_LANG == 'es') {
+                                echo '<div class="clearfix">'.$ppages->post_content.'</div>';
+                            } elseif(MY_CUR_LANG == 'en') {
+                                echo '<div class="clearfix">'.$intro.'</div>';
+                            }
                             echo '<div class="clearfix cont-pre">';
-                                echo '<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">'.$dia1.'</div>';
-                                echo '<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">'.$dia2.'</div>';
+                                if(MY_CUR_LANG == 'es') {
+                                    echo '<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">'.$dia1.'</div>';
+                                    echo '<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">'.$dia2.'</div>';
+                                } elseif(MY_CUR_LANG == 'en') {
+                                    echo '<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">'.$day1.'</div>';
+                                    echo '<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">'.$day2.'</div>';
+                                }
                                 echo '<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">';
                                     echo get_the_post_thumbnail($ppages->ID, 'logo', array('class' => 'img-responsive'));
                                 echo '</div>';
