@@ -232,7 +232,10 @@ header #lg-nav h2 {
 #organizadores .item-logo img {
   max-height: 70px;
   margin: 0 auto;
+<<<<<<< HEAD
   width: auto !important;
+=======
+>>>>>>> dda9399b211d926c050e3ace6fda8ce5563183a3
 }
 #organizadores .media {
   text-align: center;
@@ -241,6 +244,7 @@ header #lg-nav h2 {
   float: none;
   margin: 0 auto;
 }
+<<<<<<< HEAD
 #organizadores .patrocinadores {
   text-align: center;
 }
@@ -258,15 +262,23 @@ header #lg-nav h2 {
   clear: both;
   float: none;
 }
+=======
+>>>>>>> dda9399b211d926c050e3ace6fda8ce5563183a3
 #auspiciadores .cont-org {
   text-align: center;
 }
 #auspiciadores .item-logo {
+<<<<<<< HEAD
   margin: 0 -2px 60px;
   height: 80px;
   display: inline-block;
   vertical-align: middle;
   float: none;
+=======
+  margin: 0 0 60px;
+  display: inline-block;
+  vertical-align: middle;
+>>>>>>> dda9399b211d926c050e3ace6fda8ce5563183a3
 }
 #auspiciadores .item-logo:first-child img {
   width: 100%;
@@ -280,7 +292,10 @@ header #lg-nav h2 {
   text-align: center;
   border-bottom: 1px solid #bebdbd;
   background: url(../imag/back/bg-santiago1.jpg) no-repeat center top #eae8e8;
+<<<<<<< HEAD
   background-size: 195% auto;
+=======
+>>>>>>> dda9399b211d926c050e3ace6fda8ce5563183a3
 }
 #programa h3 {
   color: #ffffff;
@@ -292,7 +307,11 @@ header #lg-nav h2 {
   color: #ffffff;
 }
 #programa ul {
+<<<<<<< HEAD
   margin: 0 0 30px;
+=======
+  margin: 0;
+>>>>>>> dda9399b211d926c050e3ace6fda8ce5563183a3
   padding: 0;
 }
 #programa ul li {
@@ -316,7 +335,11 @@ header #lg-nav h2 {
 }
 #programa .cont-layer {
   position: relative;
+<<<<<<< HEAD
   padding: 70px 0 65px;
+=======
+  padding: 70px 0 80px;
+>>>>>>> dda9399b211d926c050e3ace6fda8ce5563183a3
   background: url(../imag/back/bg-cont.png) repeat left top;
   z-index: 800;
   min-height: 740px;

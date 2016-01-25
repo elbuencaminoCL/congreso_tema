@@ -4,11 +4,14 @@
         	<div class="content">
         		<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 	        		<div class="row">
+<<<<<<< HEAD
 	        			<div class="col-xs-12">
 	        				<?php include("includes/carousel.php"); ?>
 	        			</div>
 	        		</div>
 	        		<div class="row">
+=======
+>>>>>>> dda9399b211d926c050e3ace6fda8ce5563183a3
 		          		<div class="col-xs-12">
 		          			<div class="quienes-somos">
 			          			<h3 style="text-transform:uppercase;"><?php the_title();?></h3>
