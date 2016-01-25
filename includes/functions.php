@@ -21,10 +21,7 @@ function wpse_setup_theme() {
         add_image_size( 'logos-image', 250, 80, false);
         add_image_size( 'expositores', 255, 346, true);
         add_image_size( 'logo', 300, 145, true);
-<<<<<<< HEAD
         add_image_size( 'organizadores', 330, 70, false);
-=======
->>>>>>> dda9399b211d926c050e3ace6fda8ce5563183a3
     }
 } 
 add_action( 'after_setup_theme', 'wpse_setup_theme' );
@@ -32,11 +29,7 @@ add_action( 'after_setup_theme', 'wpse_setup_theme' );
 //=================================================================== CUSTOM ADMIN LOGO// 
 function my_custom_login_logo() {
     echo '<style type="text/css">
-<<<<<<< HEAD
-        body.login {background-image:url('.get_bloginfo('template_directory').'/imag/back/bg-santiago2.jpg) !important; background-size:120% 100%;}
-=======
         body.login {background-image:url('.get_bloginfo('template_directory').'/imag/back/bg-santiago2.jpg) !important;}
->>>>>>> dda9399b211d926c050e3ace6fda8ce5563183a3
         h1 a { background-image:url('.get_bloginfo('template_directory').'/imag/logo/logo_congreso_admin.png) !important; background-size:320px 67px !important; width:320px !important; height:67px !important;}
         .login #backtoblog a, .login #nav a {color:#ffffff;}
     </style>';
@@ -125,11 +118,8 @@ global $wpdb;
             if($bpages->menu_order >= 0){
                 $texto = get_post_meta( $bpages->ID, '_nombre_boton', true);
                 $link = get_post_meta( $bpages->ID, '_link_boton', true);
-<<<<<<< HEAD
                 $textoeng = get_post_meta( $bpages->ID, '_nombre_boton_eng', true);
                 $linkeng = get_post_meta( $bpages->ID, '_link_boton_eng', true);
-=======
->>>>>>> dda9399b211d926c050e3ace6fda8ce5563183a3
                 echo '<div id="bases">';
                     echo '<div class="container clearfix">';
                         echo '<div class="cont-descarga col-lg-10 col-md-10 col-sm-10 col-xs-12">';
@@ -137,15 +127,11 @@ global $wpdb;
                             echo $bpages->post_content;
                         echo '</div>';
                         echo '<div class="cont-button clearfix">';
-<<<<<<< HEAD
                             if(MY_CUR_LANG == 'es') {
                                 echo '<a href="'.get_bloginfo('wpurl').'/'.$link.'" class="descargar" target="_blank">'.$texto.'</a>';
                             } elseif(MY_CUR_LANG == 'en') {
                                 echo '<a href="'.get_bloginfo('wpurl').'/'.$linkeng.'" class="descargar" target="_blank">'.$textoeng.'</a>';
                             }
-=======
-                            echo '<a href="'.get_bloginfo('wpurl').'/'.$link.'" class="descargar" target="_blank">'.$texto.'</a>';
->>>>>>> dda9399b211d926c050e3ace6fda8ce5563183a3
                         echo '</div>';
                     echo '</div>';
                 echo '</div>';
@@ -178,7 +164,6 @@ global $wpdb;
                     echo '<div class="container clearfix">';
                         echo '<div class="cont-programa col-lg-12 col-md-12 col-sm-12 col-xs-12">';
                             echo '<h3>'.$ppages->post_title.'</h3>';
-<<<<<<< HEAD
                             echo '<div class="clearfix cont-pre">';
                                 if(MY_CUR_LANG == 'es') {
                                     echo '<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">'.$dia1.'</div>';
@@ -193,22 +178,6 @@ global $wpdb;
                                     } elseif(MY_CUR_LANG == 'en') {
                                         echo '<div class="clearfix">'.$intro.'</div>';
                                     }
-=======
-                            if(MY_CUR_LANG == 'es') {
-                                echo '<div class="clearfix">'.$ppages->post_content.'</div>';
-                            } elseif(MY_CUR_LANG == 'en') {
-                                echo '<div class="clearfix">'.$intro.'</div>';
-                            }
-                            echo '<div class="clearfix cont-pre">';
-                                if(MY_CUR_LANG == 'es') {
-                                    echo '<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">'.$dia1.'</div>';
-                                    echo '<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">'.$dia2.'</div>';
-                                } elseif(MY_CUR_LANG == 'en') {
-                                    echo '<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">'.$day1.'</div>';
-                                    echo '<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">'.$day2.'</div>';
-                                }
-                                echo '<div class="col-lg-3 col-md-3 col-sm-3 col-xs-12">';
->>>>>>> dda9399b211d926c050e3ace6fda8ce5563183a3
                                     echo get_the_post_thumbnail($ppages->ID, 'logo', array('class' => 'img-responsive'));
                                 echo '</div>';
                             echo '</div>';
@@ -278,7 +247,6 @@ function create_post_type_auspiciadores() {
     flush_rewrite_rules();
 }
 
-<<<<<<< HEAD
 add_action( 'init', 'create_post_type_organizadores' );
 function create_post_type_organizadores() {
     register_post_type( 'organizadores',
@@ -335,8 +303,6 @@ function create_post_type_patrocinadores() {
     flush_rewrite_rules();
 }
 
-=======
->>>>>>> dda9399b211d926c050e3ace6fda8ce5563183a3
 //=================================================================== IMAGES FUNCTIONS//
 function get_gallery_images(){
     global $wpdb;

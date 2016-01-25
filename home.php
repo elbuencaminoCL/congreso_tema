@@ -100,7 +100,6 @@ Template Name: Home
                         <div class="cont-org col-lg-12 col-md-12 col-sm-12 col-xs-12">
                             <div class="cont-org col-lg-12 col-md-12 col-sm-12 col-xs-12">
                                 <h3>Organizadores</h3>
-<<<<<<< HEAD
                                 <?php global $query_string;
                                 query_posts( $query_string . '&post_type=organizadores' );?>
                                     <?php if (have_posts()) : ?>
@@ -130,29 +129,6 @@ Template Name: Home
                                         <?php ++$i; endwhile;?>
                                     <?php endif; ?>
                                 <?php wp_reset_query();?>
-=======
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item-logo">
-                                    <img src="<?php bloginfo('template_directory'); ?>/imag/logo/soc_latino.jpg" alt="Sociedad Latinoamericana de Rehabilitación de la Cara y Prótesis Bucomaxilofacial" class="img-responsive" />
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item-logo">
-                                    <img src="<?php bloginfo('template_directory'); ?>/imag/logo/ismr.png" alt="ISMR" class="img-responsive" />
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item-logo">
-                                    <img src="<?php bloginfo('template_directory'); ?>/imag/logo/fundacion.jpg" alt="Fundación OREMA" class="img-responsive" />
-                                </div>
-                            </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                                <h3>Patrocinadores</h3>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item-logo">
-                                    <img src="<?php bloginfo('template_directory'); ?>/imag/logo/uandes.jpg" alt="Universidad de Los Andes" class="img-responsive" />
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item-logo">
-                                    <img src="<?php bloginfo('template_directory'); ?>/imag/logo/sociedad.png" alt="Sociedad de Prótesis y Rehabilitación Oral de Chile" class="img-responsive" />
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12 item-logo">
-                                    <img src="<?php bloginfo('template_directory'); ?>/imag/logo/soc_cirugia.jpg" alt="Sociedad de Prótesis y Rehabilitación Oral de Chile" class="img-responsive" />
-                                </div>
->>>>>>> dda9399b211d926c050e3ace6fda8ce5563183a3
                             </div>
                         </div>
                     </div>
@@ -185,7 +161,6 @@ Template Name: Home
                                     </div>
                                 </div>
                                 <div class="cont-description clearfix row">
-<<<<<<< HEAD
                                     <? 
                                         if(MY_CUR_LANG == 'es') {
                                             echo '<div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">';
@@ -209,17 +184,6 @@ Template Name: Home
                                             echo '</div>';
                                         }
                                     ?>
-=======
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <h5>Jueves 17 de Marzo a las 18:00</h5>
-                                        <p>Vino de Honor – Universidad de Los Andes<br />Incluido en el valor del Congreso</p>
-                                    </div>
-                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                                        <h5>Sábado 19 de Marzo a las 12:30</h5>
-                                        <p>Salida a Visita con Almuerzo a Viña Santa Rita<br />Valor de Adhesión a Visita (no incluido en el valor del Congreso): CLP 70.000 (* sujeto a una cantidad mínima de participantes)</p>
-                                        <p>Programa incluye: Traslado Universidad de Los Andes - Viña Santa Rita - Hotel Plaza El Bosque</p>
-                                    </div>
->>>>>>> dda9399b211d926c050e3ace6fda8ce5563183a3
                                 </div>
                             </div>
                         </div>
